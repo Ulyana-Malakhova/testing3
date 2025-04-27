@@ -77,4 +77,14 @@ public class MatrixCalculatorTest {
         double[][] result = calculator.multiply(matrixA, matrixB);
         assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void testMatrixTranspose() {
+        MatrixCalculator calculator = new MatrixCalculator();
+        double[][] matrix = {{1, 2}, {3, 4}};
+        double[][] expected = {{1, 3}, {2, 4}};
+
+        double[][] result = calculator.transpose(matrix);
+        assertArrayEquals(expected, result);
+    }
 }
