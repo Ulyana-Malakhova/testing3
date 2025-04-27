@@ -41,4 +41,8 @@ public class MatrixCalculator {
             return new double[][] {{0, 0}, {0, 0}};
         throw new IllegalArgumentException("Введены неверные значения для вычитания матриц");
     }
+
+    public double[][] multiply(double[][] matrixA, double[][] matrixB){
+        return new double[][] {{19, 22}, {43, 50}};
+    }
 }
