@@ -20,4 +20,10 @@ public class EquationSolverTest {
         EquationSolver equationSolver = new EquationSolver();
         Assertions.assertArrayEquals(new double[0],equationSolver.solveQuadratic(1,1,1));
     }
+
+    @Test
+    void solveQuadraticA2B3C2Test(){
+        EquationSolver equationSolver = new EquationSolver();
+        Assertions.assertArrayEquals(new double[]{2, -0.5},equationSolver.solveQuadratic(2,-3,-2));
+    }
 }
