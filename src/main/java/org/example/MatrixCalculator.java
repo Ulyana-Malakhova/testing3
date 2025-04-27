@@ -42,6 +42,12 @@ public class MatrixCalculator {
         throw new IllegalArgumentException("Введены неверные значения для вычитания матриц");
     }
 
+    /**
+     * Метод умножения матриц
+     * @param matrixA первая матрица
+     * @param matrixB вторая матрица
+     * @return результат умножения
+     */
     public double[][] multiply(double[][] matrixA, double[][] matrixB){
         double[][] matrixA1 = {{1, 2}, {3, 4}};
         double[][] matrixA2 = {{1, 2, 3}};
