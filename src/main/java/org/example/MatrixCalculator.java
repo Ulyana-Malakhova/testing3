@@ -47,35 +47,19 @@ public class MatrixCalculator {
      * @return результат умножения
      */
     public double[][] multiply(double[][] matrixA, double[][] matrixB){
-        double[][] matrixA1 = {{1, 2}, {3, 4}};
-        double[][] matrixA2 = {{1, 2, 3}};
-        boolean a1 = true;
-        boolean a2 = true;
-        if (matrixA.length == matrixA1.length && matrixA[0].length == matrixA1[0].length) {
-            for (int i = 0; i < matrixA.length; i++) {
-                for (int j = 0; j < matrixA[i].length; j++) {
-                    if (matrixA[i][j] != matrixA1[i][j]) {
-                        a1 = false;
-                    }
+        int rowsA = matrixA.length;
+        int colsA = matrixA[0].length;
+        int colsB = matrixB[0].length;
+        double[][] result = new double[rowsA][colsB];
+
+        for (int i = 0; i < rowsA; i++) {
+            for (int j = 0; j < colsB; j++) {
+                for (int k = 0; k < colsA; k++) {
+                    result[i][j] += matrixA[i][k] * matrixB[k][j];
                 }
             }
         }
-        else a1 = false;
-        if (matrixA.length == matrixA2.length && matrixA[0].length == matrixA2[0].length) {
-            for (int i = 0; i < matrixA.length; i++) {
-                for (int j = 0; j < matrixA[i].length; j++) {
-                    if (matrixA[i][j] != matrixA2[i][j]) {
-                        a2 = false;
-                    }
-                }
-            }
-        }
-        else a2 = false;
-        if (a1 == true)
-            return new double[][] {{19, 22}, {43, 50}};
-        else if (a2 == true)
-            return new double[][] {{32}};
-        throw new IllegalArgumentException("Введены неверные значения для умножения матриц");
+        return result;
     }
 
     /**
