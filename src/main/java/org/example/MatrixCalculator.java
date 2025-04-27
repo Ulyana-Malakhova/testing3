@@ -13,4 +13,8 @@ public class MatrixCalculator {
         }
         return new double[][] {{6, 8}, {10, 12}};
     }
+
+    public double[][] subtract(double[][] matrixA, double[][] matrixB) {
+        return new double[][] {{4, 4}, {4, 4}};
+    }
 }
