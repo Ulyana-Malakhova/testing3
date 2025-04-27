@@ -2,7 +2,7 @@ import org.example.MatrixCalculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MatrixCalculatorTest {
     @Test
@@ -21,5 +21,16 @@ public class MatrixCalculatorTest {
         double[][] result = calculator.add(matrixA, matrixB);
 
         assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testMatrixAdditionDifferentSizes() {
+        MatrixCalculator calculator = new MatrixCalculator();
+        double[][] matrixA = {{1, 2, 3}, {4, 5, 6}};
+        double[][] matrixB = {{7, 8}, {9, 10}};
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            calculator.add(matrixA, matrixB);
+        });
     }
 }
