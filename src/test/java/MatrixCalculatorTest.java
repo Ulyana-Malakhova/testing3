@@ -66,4 +66,15 @@ public class MatrixCalculatorTest {
         double[][] result = calculator.multiply(matrixA, matrixB);
         assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void testMatrixMultiplicationSizeMismatch() {
+        MatrixCalculator calculator = new MatrixCalculator();
+        double[][] matrixA = {{1, 2, 3}};
+        double[][] matrixB = {{4}, {5}, {6}};
+        double[][] expected = {{32}};
+
+        double[][] result = calculator.multiply(matrixA, matrixB);
+        assertArrayEquals(expected, result);
+    }
 }
