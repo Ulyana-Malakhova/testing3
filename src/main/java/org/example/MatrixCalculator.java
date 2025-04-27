@@ -68,34 +68,15 @@ public class MatrixCalculator {
      * @return результат транспонирования
      */
     public double[][] transpose(double[][] matrix) {
-        double[][] matrix1 = {{1, 2}, {3, 4}};
-        double[][] matrix2 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        boolean a1 = true;
-        boolean a2 = true;
-        if (matrix.length == matrix1.length && matrix[0].length == matrix1[0].length) {
-            for (int i = 0; i < matrix.length; i++) {
-                for (int j = 0; j < matrix[i].length; j++) {
-                    if (matrix[i][j] != matrix1[i][j]) {
-                        a1 = false;
-                    }
-                }
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        double[][] result = new double[cols][rows];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                result[j][i] = matrix[i][j];
             }
         }
-        else a1 = false;
-        if (matrix.length == matrix2.length && matrix[0].length == matrix2[0].length) {
-            for (int i = 0; i < matrix.length; i++) {
-                for (int j = 0; j < matrix[i].length; j++) {
-                    if (matrix[i][j] != matrix2[i][j]) {
-                        a2 = false;
-                    }
-                }
-            }
-        }
-        else a2 = false;
-        if (a1 == true)
-            return new double[][] {{1, 3}, {2, 4}};
-        else if (a2 == true)
-            return new double[][] {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
-        throw new IllegalArgumentException("Введены неверные значения для транспонирования матрицы");
+        return result;
     }
 }
