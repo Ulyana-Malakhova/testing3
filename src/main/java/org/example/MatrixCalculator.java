@@ -11,7 +11,14 @@ public class MatrixCalculator {
         if (matrixA.length != matrixB.length || matrixA[0].length != matrixB[0].length) {
             throw new IllegalArgumentException("Матрицы должны иметь одинаковые размеры.");
         }
-        return new double[][] {{6, 8}, {10, 12}};
+
+        double[][] result = new double[matrixA.length][matrixA[0].length];
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int j = 0; j < matrixA[0].length; j++) {
+                result[i][j] = matrixA[i][j] + matrixB[i][j];
+            }
+        }
+        return result;
     }
 
     /**
