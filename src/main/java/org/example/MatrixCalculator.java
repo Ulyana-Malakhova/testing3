@@ -1,6 +1,12 @@
 package org.example;
 
 public class MatrixCalculator {
+    /**
+     * Метод для сложения матриц
+     * @param matrixA первая матрица
+     * @param matrixB вторая матрица
+     * @return  сумма матриц
+     */
     public double[][] add(double[][] matrixA, double[][] matrixB){
         if (matrixA.length != matrixB.length || matrixA[0].length != matrixB[0].length) {
             throw new IllegalArgumentException("Матрицы должны иметь одинаковые размеры.");
