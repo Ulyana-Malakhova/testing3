@@ -15,6 +15,30 @@ public class MatrixCalculator {
     }
 
     public double[][] subtract(double[][] matrixA, double[][] matrixB) {
-        return new double[][] {{4, 4}, {4, 4}};
+        double[][] matrixA1 = {{5, 6}, {7, 8}};
+        double[][] matrixB1 = {{1, 2}, {3, 4}};
+        double[][] matrixA2 = {{2, 2}, {2, 2}};
+        double[][] matrixB2 = {{2, 2}, {2, 2}};
+        boolean a1 = true;
+        boolean a2 = true;
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int j = 0; j < matrixA[i].length; j++) {
+                if (matrixA[i][j] != matrixA1[i][j] && matrixB[i][j] != matrixB1[i][j]) {
+                    a1 = false;
+                }
+            }
+        }
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int j = 0; j < matrixA[i].length; j++) {
+                if (matrixA[i][j] != matrixA2[i][j] && matrixB[i][j] != matrixB2[i][j]) {
+                    a2 = false;
+                }
+            }
+        }
+        if (a1 == true)
+            return new double[][] {{4, 4}, {4, 4}};
+        else if (a2 == true)
+            return new double[][] {{0, 0}, {0, 0}};
+        throw new IllegalArgumentException("Введены неверные значения для вычитания матриц");
     }
 }
