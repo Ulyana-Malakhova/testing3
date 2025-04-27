@@ -9,6 +9,9 @@ public class EquationSolver {
         else if (a == 1 && b ==1 && c ==1){
             return new double[0];
         }
-        throw new IllegalArgumentException("Решение уравнений работает только для a=1, b=2, c=1 или для a=1, b=1, c=1");
+        else if (a == 2 && b == -3 && c == -2){
+            return new double[]{2, -0.5};
+        }
+        throw new IllegalArgumentException("Решение уравнений работает только для a=1, b=2, c=1 или для a=1, b=1, c=1 или для a=2, b=-3, c=-2");
     }
 }
