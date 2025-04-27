@@ -44,4 +44,15 @@ public class MatrixCalculatorTest {
         double[][] result = calculator.subtract(matrixA, matrixB);
         assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void testMatrixSubtractionSameValues() {
+        MatrixCalculator calculator = new MatrixCalculator();
+        double[][] matrixA = {{2, 2}, {2, 2}};
+        double[][] matrixB = {{2, 2}, {2, 2}};
+        double[][] expected = {{0, 0}, {0, 0}};
+
+        double[][] result = calculator.subtract(matrixA, matrixB);
+        assertArrayEquals(expected, result);
+    }
 }
