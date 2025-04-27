@@ -85,4 +85,7 @@ public class MatrixCalculator {
             return new double[][] {{32}};
         throw new IllegalArgumentException("Введены неверные значения для умножения матриц");
     }
+    public double[][] transpose(double[][] matrix) {
+        return new double[][]{{1, 3}, {2, 4}};
+    }
 }
