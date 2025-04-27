@@ -4,6 +4,14 @@ package org.example;
 import java.util.function.Function;
 
 public class Integrator {
+    /**
+     * Метод для интегрирования функуий
+     * @param function интегрируемая функция
+     * @param a нижний предел интегрирования
+     * @param b верхний предел интегрирования
+     * @param n количество разбиений интегрирования
+     * @return результат интегрирования
+     */
     public double integrate(Function<Double, Double> function, double a, double b, int n) {
         //todo реализовать интегрирование функции
         if (function.apply(0.5).equals(0.25) && a == 0 && b == 1 && n == 1000)
