@@ -14,6 +14,12 @@ public class MatrixCalculator {
         return new double[][] {{6, 8}, {10, 12}};
     }
 
+    /**
+     * Метод вычитания матриц
+     * @param matrixA первая матрица
+     * @param matrixB вторая матрица
+     * @return результат вычитания
+     */
     public double[][] subtract(double[][] matrixA, double[][] matrixB) {
         double[][] matrixA1 = {{5, 6}, {7, 8}};
         double[][] matrixB1 = {{1, 2}, {3, 4}};
