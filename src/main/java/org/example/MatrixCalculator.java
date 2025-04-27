@@ -85,6 +85,12 @@ public class MatrixCalculator {
             return new double[][] {{32}};
         throw new IllegalArgumentException("Введены неверные значения для умножения матриц");
     }
+
+    /**
+     * Метод транспонирования матрицы
+     * @param matrix исходная матрица
+     * @return результат транспонирования
+     */
     public double[][] transpose(double[][] matrix) {
         double[][] matrix1 = {{1, 2}, {3, 4}};
         double[][] matrix2 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
