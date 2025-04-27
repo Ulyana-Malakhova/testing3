@@ -12,6 +12,12 @@ public class EquationSolverTest {
     @Test
     void solveQuadraticA1B2C1Test(){
         EquationSolver equationSolver = new EquationSolver();
-        Assertions.assertEquals(-1,equationSolver.solveQuadratic(1,2,1));
+        Assertions.assertArrayEquals(new double[]{-1},equationSolver.solveQuadratic(1,2,1));
+    }
+
+    @Test
+    void solveQuadraticA1B1C1Test(){
+        EquationSolver equationSolver = new EquationSolver();
+        Assertions.assertArrayEquals(new double[0],equationSolver.solveQuadratic(1,1,1));
     }
 }
